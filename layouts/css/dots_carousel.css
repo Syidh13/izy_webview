@@ -1,0 +1,19 @@
+/* Style dot ala Tailwind (padanan) */
+.slick-dots {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+.slick-dots li {
+  margin: 0;
+}
+.slick-dots li button.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: #cbd5e1; /* slate-300 */
+}
+.slick-dots li.slick-active button.dot {
+  background: oklch(62.3% 0.214 259.815); /* blue-500 */
+  transform: scale(1.15);
+}

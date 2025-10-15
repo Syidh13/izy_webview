@@ -9,6 +9,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/dots_carousel.css">
     <title>Home</title>
 
 
@@ -27,10 +28,27 @@
 
             <!-- Welcome -->
             <section class="py-2">
-                <div class="font-semibold font-title text-slate-500 text-xs">Welcome</div>
+                <div class="font-regular font-title text-slate-500 text-xs">Welcome</div>
                 <div class="font-body font-extralight text-2xl text-slate-800">Syidh Al Rasyid</div>
             </section>
             <!-- end Welcome -->
+
+            <!-- info -->
+            <section class="py-2">
+                <div class=" rounded-xl flex bg-white drop-shadow-sm">
+                    <!-- my room -->
+                    <div class="w-full text-center border-r py-3 space-y-1 border-slate-200">
+                        <div class="font-title text-base font-light">1223</div>
+                        <div class="font-body text-xs font-regular text-slate-400">My Room</div>
+                    </div>
+                    <!-- Checkout Time -->
+                    <div class="w-full text-center py-3 space-y-1">
+                        <div class="font-title text-base font-light">12 August 2025</div>
+                        <div class="font-body text-xs font-regular text-slate-400">Checkout</div>
+                    </div>
+                </div>
+            </section>
+            <!-- end info -->
 
             <!-- Banner -->
             <section class="py-2">
@@ -54,7 +72,78 @@
                         </a>
                     </div>
                 </div>
+
+                <!-- Container bawah (dots kiri + tombol kanan) -->
+                <div class="flex items-center justify-between pt-1">
+                    <div class="dots-container"></div>
+                    <a href="#see-more"
+                        class="text-sm font-body text-blue-500 hover:underline border py-1 px-2 rounded-xl">
+                        See more
+                    </a>
+                </div>
             </section>
+            <!-- end Banner -->
+
+            <!-- Our Services -->
+            <section class="py-4 space-y-4">
+                <div class="font-title text-xl">Our Services</div>
+                <div class="grid grid-cols-2 gap-2">
+                    <!-- services -->
+                    <a href="#services" class="col-span-2">
+                        <div class="relative w-full mx-auto">
+                            <!-- Gambar utama -->
+                            <img src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg"
+                                alt="pool dining" class="w-full rounded-2xl object-cover h-32">
+
+                            <!-- Overlay text & button -->
+                            <div
+                                class="absolute bottom-0 w-full bg-gradient-to-t from-black/60 to-transparent p-4 rounded-b-2xl">
+                                <h3 class="text-white  text-base font-title font-regular text-center text-shadow-sm">
+                                    Services</h3>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- end services -->
+
+                    <div class="grid grid-cols-2 gap-2 col-span-2">
+                        <!-- Dinning -->
+                        <a href="#Dinning" class="col-span-1">
+                            <div class="relative w-full mx-auto">
+                                <!-- Gambar utama -->
+                                <img src="https://images.pexels.com/photos/225228/pexels-photo-225228.jpeg"
+                                    alt="pool dining" class="w-full rounded-2xl object-cover h-32">
+
+                                <!-- Overlay text & button -->
+                                <div
+                                    class="absolute bottom-0 w-full bg-gradient-to-t from-black/60 to-transparent p-4 rounded-b-2xl">
+                                    <h3
+                                        class="text-white  text-base font-title font-regular text-center text-shadow-sm">
+                                        Dinning</h3>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- end Dinning -->
+                        <!-- Spa -->
+                        <a href="#Spa" class="col-span-1">
+                            <div class="relative w-full mx-auto">
+                                <!-- Gambar utama -->
+                                <img src="https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg"
+                                    alt="pool dining" class="w-full rounded-2xl object-cover h-32">
+
+                                <!-- Overlay text & button -->
+                                <div
+                                    class="absolute bottom-0 w-full bg-gradient-to-t from-black/60 to-transparent p-4 rounded-b-2xl">
+                                    <h3
+                                        class="text-white  text-base font-title font-regular text-center text-shadow-sm">
+                                        Spa</h3>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- end Spa -->
+                    </div>
+                </div>
+            </section>
+            <!-- end Our Services -->
         </div>
     </section>
 
@@ -71,6 +160,12 @@
             prevArrow: false,
             nextArrow: false,
             slidesToScroll: 1,
+            dots: true,
+            arrows: false,
+            appendDots: $('.dots-container'),
+            customPaging: function (slider, i) {
+                return '<button type="button" class="dot"></button>';
+            },
             autoplay: true,
             autoplaySpeed: 3000,
         });
