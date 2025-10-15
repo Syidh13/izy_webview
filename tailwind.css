@@ -1,17 +1,8 @@
 @import 'tailwindcss';
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
-
 @theme {
   --font-title: 'Outfit', sans-serif;
   --font-body: 'Outfit', sans-serif;
-
-  
- --color-test: #fff;
-}
-
-@layer components {
-  .theme {
-    bg-
-  }
+  --color-brand: oklch(62.3% 0.214 259.815);
 }
