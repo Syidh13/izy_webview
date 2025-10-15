@@ -7,8 +7,11 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
     <link rel="stylesheet" href="./css/styles.css">
     <title>Home</title>
+
+
 </head>
 
 <body>
@@ -27,10 +30,52 @@
                 <div class="font-semibold font-title text-slate-500 text-xs">Welcome</div>
                 <div class="font-body font-extralight text-2xl text-slate-800">Syidh Al Rasyid</div>
             </section>
+            <!-- end Welcome -->
+
+            <!-- Banner -->
+            <section class="py-2">
+                <div class="banner">
+                    <div>
+                        <a href="#test">
+                            <img src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg" alt=""
+                                class="aspect-video rounded-xl object-cover">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#test">
+                            <img src="https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg" alt=""
+                                class="aspect-video rounded-xl object-cover">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#test">
+                            <img src="https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg" alt=""
+                                class="aspect-video rounded-xl object-cover">
+                        </a>
+                    </div>
+                </div>
+            </section>
         </div>
     </section>
 
 
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+    <script type="text/javascript">
+        $('.banner').slick({
+            slidesToShow: 1,
+            prevArrow: false,
+            nextArrow: false,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 3000,
+        });
+    </script>
 </body>
+
 
 </html>
